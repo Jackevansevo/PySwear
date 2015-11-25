@@ -1,10 +1,7 @@
 #Pyswear
 Web Project to count the occurrences of swear words in popular rap artists' songs
 
-##Instructions
-The website isn't currently hosted anywhere but can be viewed locally
-
-## Prerequisites
+## Building and Running Project Locally
 This project was built in Python3 so may not be 100% backwards compatible with older versions. To install Python3 see: (https://www.python.org/downloads/)
 
 ## Installing Requirements
