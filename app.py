@@ -20,7 +20,6 @@ SECRET_KEY = 'my_precious'
 USERNAME = 'admin'
 PASSWORD = 'admin'
 
-
 # create an initialize app
 APP = Flask(__name__)
 sslify = SSLify(APP)
