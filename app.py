@@ -25,7 +25,7 @@ APP = Flask(__name__)
 APP.config.from_object(__name__)
 
 # Create a chartkick blueprint (see documentation for details)
-CK = Blueprint('ck_page', __name__, static_folder=chartkick.js(), static_url_path='/static')
+CK = Blueprint('ck_page', __name__, static_folder=chartkick.js(), static_url_path='static')
 APP.register_blueprint(CK, url_prefix='/ck')
 APP.jinja_env.add_extension("chartkick.ext.charts")
 
