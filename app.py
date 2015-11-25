@@ -14,7 +14,7 @@ from flask import (
 
 # configuration
 DATABASE = 'pyswear.db'
-DEBUG = True
+DEBUG = False
 SECRET_KEY = 'my_precious'
 USERNAME = 'admin'
 PASSWORD = 'admin'
