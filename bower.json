@@ -1,0 +1,29 @@
+{
+  "name": "PySwear",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Jackevansevo/PySwear",
+  "authors": [
+    "Jack Evans <jack@evans.gb.net>"
+  ],
+  "description": "A web project to analyse swear word frequency in popular rap songs",
+  "main": "app.py",
+  "keywords": [
+    "python",
+    "flask",
+    "sqlite3"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-css": "~3.3.4",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
+  }
+}

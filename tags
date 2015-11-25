@@ -1,0 +1,76 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+add_albums	/home/jack/MEGA/PySwear/populate_database.py	/^def add_albums(artist_result, artist_id):$/;"	f	language:Python
+add_artists	/home/jack/MEGA/PySwear/populate_database.py	/^def add_artists(results):$/;"	f	language:Python
+add_tracks	/home/jack/MEGA/PySwear/populate_database.py	/^def add_tracks(album, album_id):$/;"	f	language:Python
+add_word	/home/jack/MEGA/PySwear/database.py	/^    def add_word(self, data, word_track):$/;"	m	language:Python	class:DataBaseConnection
+APP	/home/jack/MEGA/PySwear/app.py	/^APP = Flask(__name__)$/;"	v	language:Python
+ARTISTS	/home/jack/MEGA/PySwear/populate_database.py	/^    ARTISTS = tuple([line.rstrip('\\n') for line in open('artists.txt')])$/;"	v	language:Python
+ARTIST_URL_REGEX	/home/jack/MEGA/PySwear/scrape_web.py	/^ARTIST_URL_REGEX = r"http:\\\/\\\/genius.com\\\/artists\\\/"$/;"	v	language:Python
+BeautifulSoup	/home/jack/MEGA/PySwear/scrape_web.py	/^from bs4 import BeautifulSoup$/;"	i	language:Python
+before_request	/home/jack/MEGA/PySwear/app.py	/^def before_request():$/;"	f	language:Python
+BLUEFONT	/home/jack/MEGA/PySwear/scrape_web.py	/^BLUEFONT = "\\033[1;36m{0}\\033[00m"$/;"	v	language:Python
+calc_hook_end	/home/jack/MEGA/PySwear/calc_hook.py	/^def calc_hook_end(lyrics, hook_start):$/;"	f	language:Python
+calc_hook_start	/home/jack/MEGA/PySwear/calc_hook.py	/^def calc_hook_start(lyrics):$/;"	f	language:Python
+chartkick	/home/jack/MEGA/PySwear/app.py	/^import chartkick$/;"	i	language:Python
+CK	/home/jack/MEGA/PySwear/app.py	/^CK = Blueprint('ck_page', __name__, static_folder=chartkick.js(), static_url_path='\/static')$/;"	v	language:Python
+close_connection	/home/jack/MEGA/PySwear/database.py	/^    def close_connection(self):$/;"	m	language:Python	class:DataBaseConnection
+CONN	/home/jack/MEGA/PySwear/populate_database.py	/^    CONN = DataBaseConnection('pyswear.db')$/;"	v	language:Python
+connect_db	/home/jack/MEGA/PySwear/app.py	/^def connect_db():$/;"	f	language:Python
+Counter	/home/jack/MEGA/PySwear/scrape_web.py	/^from collections import Counter, OrderedDict$/;"	i	language:Python
+create_scraper_instance	/home/jack/MEGA/PySwear/populate_database.py	/^def create_scraper_instance(artist_name):$/;"	f	language:Python
+DATABASE	/home/jack/MEGA/PySwear/app.py	/^DATABASE = 'pyswear.db'$/;"	v	language:Python
+DataBaseConnection	/home/jack/MEGA/PySwear/database.py	/^class DataBaseConnection(object):$/;"	c	language:Python
+DataBaseConnection	/home/jack/MEGA/PySwear/populate_database.py	/^from database import DataBaseConnection$/;"	i	language:Python
+DEBUG	/home/jack/MEGA/PySwear/app.py	/^DEBUG = True$/;"	v	language:Python
+get_album_id	/home/jack/MEGA/PySwear/database.py	/^    def get_album_id(self, album_name):$/;"	m	language:Python	class:DataBaseConnection
+get_artist_id	/home/jack/MEGA/PySwear/database.py	/^    def get_artist_id(self, artist_name):$/;"	m	language:Python	class:DataBaseConnection
+get_artist_page_url	/home/jack/MEGA/PySwear/scrape_web.py	/^    def get_artist_page_url(self):$/;"	m	language:Python	class:WebScraper
+get_hook	/home/jack/MEGA/PySwear/calc_hook.py	/^def get_hook(lyrics):$/;"	f	language:Python
+get_hook	/home/jack/MEGA/PySwear/scrape_web.py	/^from calc_hook import get_hook$/;"	i	language:Python
+get_index_page_url	/home/jack/MEGA/PySwear/scrape_web.py	/^def get_index_page_url(name):$/;"	f	language:Python
+get_results	/home/jack/MEGA/PySwear/database.py	/^    def get_results(self, query):$/;"	m	language:Python	class:DataBaseConnection
+get_soup	/home/jack/MEGA/PySwear/scrape_web.py	/^def get_soup(url):$/;"	f	language:Python
+get_swear_word_count	/home/jack/MEGA/PySwear/scrape_web.py	/^def get_swear_word_count(lyrics):$/;"	f	language:Python
+get_track_id	/home/jack/MEGA/PySwear/database.py	/^    def get_track_id(self, track_name):$/;"	m	language:Python	class:DataBaseConnection
+GREENFONT	/home/jack/MEGA/PySwear/scrape_web.py	/^GREENFONT = "\\033[1;32m{0}\\033[00m"$/;"	v	language:Python
+KEY_WORDS	/home/jack/MEGA/PySwear/scrape_web.py	/^KEY_WORDS = ['bastard', 'bitch', 'cock', 'fag', 'fuck', 'fucked', 'fuckin',$/;"	v	language:Python
+KEY_WORDS_REGEX	/home/jack/MEGA/PySwear/scrape_web.py	/^KEY_WORDS_REGEX = ("|".join("\\\\b{0}\\\\b".format(w) for w in KEY_WORDS))$/;"	v	language:Python
+OrderedDict	/home/jack/MEGA/PySwear/scrape_web.py	/^from collections import Counter, OrderedDict$/;"	i	language:Python
+page_not_found	/home/jack/MEGA/PySwear/app.py	/^def page_not_found(error):$/;"	f	language:Python
+parse_album_info	/home/jack/MEGA/PySwear/scrape_web.py	/^def parse_album_info(soup):$/;"	f	language:Python
+parse_track_lyrics	/home/jack/MEGA/PySwear/scrape_web.py	/^def parse_track_lyrics(track_page):$/;"	f	language:Python
+PASSWORD	/home/jack/MEGA/PySwear/app.py	/^PASSWORD = 'admin'$/;"	v	language:Python
+POOL	/home/jack/MEGA/PySwear/populate_database.py	/^    POOL = Pool(len(ARTISTS))$/;"	v	language:Python
+Pool	/home/jack/MEGA/PySwear/populate_database.py	/^from multiprocessing.pool import Pool$/;"	i	language:Python
+query_db	/home/jack/MEGA/PySwear/app.py	/^def query_db(query, args=(), one=False):$/;"	f	language:Python
+query_db	/home/jack/MEGA/PySwear/database.py	/^    def query_db(self, query, args=(), one=False):$/;"	m	language:Python	class:DataBaseConnection
+re	/home/jack/MEGA/PySwear/calc_hook.py	/^import re$/;"	i	language:Python
+re	/home/jack/MEGA/PySwear/scrape_web.py	/^import re$/;"	i	language:Python
+REDFONT	/home/jack/MEGA/PySwear/scrape_web.py	/^REDFONT = "\\033[1;31m{0}\\033[00m"$/;"	v	language:Python
+request	/home/jack/MEGA/PySwear/scrape_web.py	/^import urllib.request$/;"	i	language:Python
+run	/home/jack/MEGA/PySwear/scrape_web.py	/^    def run(self):$/;"	m	language:Python	class:WebScraper
+run_query	/home/jack/MEGA/PySwear/database.py	/^    def run_query(self, query, data):$/;"	m	language:Python	class:DataBaseConnection
+run_script	/home/jack/MEGA/PySwear/database.py	/^    def run_script(self, script):$/;"	m	language:Python	class:DataBaseConnection
+scan_album_page	/home/jack/MEGA/PySwear/scrape_web.py	/^    def scan_album_page(self, page_url):$/;"	m	language:Python	class:WebScraper
+scan_artist_page	/home/jack/MEGA/PySwear/scrape_web.py	/^    def scan_artist_page(self, artist_page_url):$/;"	m	language:Python	class:WebScraper
+SCRAPE_RESULTS	/home/jack/MEGA/PySwear/populate_database.py	/^    SCRAPE_RESULTS = POOL.map(create_scraper_instance, ARTISTS)$/;"	v	language:Python
+SECRET_KEY	/home/jack/MEGA/PySwear/app.py	/^SECRET_KEY = 'my_precious'$/;"	v	language:Python
+show_album_page	/home/jack/MEGA/PySwear/app.py	/^def show_album_page(artist_slug, album_slug):$/;"	f	language:Python
+show_artist_index	/home/jack/MEGA/PySwear/app.py	/^def show_artist_index():$/;"	f	language:Python
+show_artist_page	/home/jack/MEGA/PySwear/app.py	/^def show_artist_page(artist_slug):$/;"	f	language:Python
+show_index_page	/home/jack/MEGA/PySwear/app.py	/^def show_index_page():$/;"	f	language:Python
+show_track_page	/home/jack/MEGA/PySwear/app.py	/^def show_track_page(artist_slug, album_slug, track_slug):$/;"	f	language:Python
+slugify	/home/jack/MEGA/PySwear/scrape_web.py	/^def slugify(text):$/;"	f	language:Python
+sqlite3	/home/jack/MEGA/PySwear/app.py	/^import sqlite3$/;"	i	language:Python
+sqlite3	/home/jack/MEGA/PySwear/database.py	/^import sqlite3$/;"	i	language:Python
+sys	/home/jack/MEGA/PySwear/populate_database.py	/^import sys$/;"	i	language:Python
+tally_swear_count	/home/jack/MEGA/PySwear/populate_database.py	/^def tally_swear_count(artist):$/;"	f	language:Python
+teardown_request	/home/jack/MEGA/PySwear/app.py	/^def teardown_request(exception):$/;"	f	language:Python
+unidecode	/home/jack/MEGA/PySwear/scrape_web.py	/^import unidecode$/;"	i	language:Python
+urllib	/home/jack/MEGA/PySwear/scrape_web.py	/^import urllib.request$/;"	i	language:Python
+USERNAME	/home/jack/MEGA/PySwear/app.py	/^USERNAME = 'admin'$/;"	v	language:Python
+WebScraper	/home/jack/MEGA/PySwear/populate_database.py	/^from scrape_web import WebScraper$/;"	i	language:Python
+WebScraper	/home/jack/MEGA/PySwear/scrape_web.py	/^class WebScraper:$/;"	c	language:Python
+__del__	/home/jack/MEGA/PySwear/database.py	/^    def __del__(self):$/;"	m	language:Python	class:DataBaseConnection	file:
+__init__	/home/jack/MEGA/PySwear/database.py	/^    def __init__(self, db):$/;"	m	language:Python	class:DataBaseConnection
+__init__	/home/jack/MEGA/PySwear/scrape_web.py	/^    def __init__(self, artist_name, verbose_flag):$/;"	m	language:Python	class:WebScraper

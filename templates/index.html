@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class=container align='center'>
+    <div class="jumbotron" style="margin-top: 3em;">
+        <h1>Pyswear</h1>
+        <p>A web project to analyse swear word frequency in popular rap songs</p>
+        <p>Data sourced from <a href="http://www.genius.com">genius.com</a></p>
+        <p><a class="btn btn-primary btn-lg" href="{{ url_for('show_artist_index') }}" role="button">See artist index</a></p>
+    </div>
+    <h2 style="margin-top: 3em;">Site Progress</h2>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+            <span class="sr-only">50% Complete</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

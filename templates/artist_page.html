@@ -1,0 +1,81 @@
+<!doctype html>
+{% extends "layout.html" %}
+{% block body %}
+<style type="text/css">
+
+.container-fluid {
+    width: 90%;
+    margin: auto;
+}
+
+</style>
+<script src="{{ url_for('static', filename='fullscreenscrolling.js' ) }}"></script>
+<nav role="navigation" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Artist: {{ artist.artist_name }}</a>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{{ url_for('show_artist_index') }}">Artist Index</a></li>
+                <li class="active"><a href="{{ url_for('show_index_page') }}">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="fullpage">
+    <div class="section">
+        <div class="container-fluid row">
+            <div class="col-lg-6 cl-sm-12" style="height: 30em; overflow: auto;">
+                <table class="table table-striped table-hover table-condensed header-fxied">
+                    <thead>
+                        <tr>
+                            <th>Album Name</th>
+                            <th>Album Release Date</th>
+                            <th>Album Swear Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for album in albums %}
+                        <tr>
+                            <td>
+                                <a href="{{ url_for('show_album_page', artist_slug=artist.artist_slug, album_slug=album.album_slug) }}">{{ album.album_name }}</a>
+                            </td>
+                            <td>{{ album.album_release_year }}</td>
+                            <td>{{ album.album_swear_count }}</td>
+                            {% else %}
+                            <li>No entries found</li>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h4 align="center">Swear Word Distribution</h4>
+                {% pie_chart pie_chart %}
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h4 style="margin-bottom: 5em;" align="center">Swear Words Per Album</h4>
+        <div class="container" align="center">
+            {% column_chart column_chart %}
+        </div>
+    </div>
+    <div class="section">
+        <h4 style="margin-bottom: 5em;" align="center">Swear Words Over Time</h4>
+        <div class="container" align="center">
+            {% column_chart swear_words_over_time_graph %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

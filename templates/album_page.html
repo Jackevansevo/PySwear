@@ -1,0 +1,67 @@
+<!doctype html>
+{% extends "layout.html" %}
+{% block body %}
+
+<style type="text/css">
+
+.container-fluid {
+    width: 90%;
+    margin: auto;
+}
+
+</style>
+<script src="{{ url_for('static', filename='fullscreenscrolling.js' ) }}"></script>
+<nav role="navigation" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Album: {{ album.album_name }}</a>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{{ url_for('show_artist_index') }}">Artist Index</a></li>
+                <li class="active"><a href="{{ url_for('show_artist_page', artist_slug=artist.artist_slug) }}">Artist Page</a></li>
+                <li class="active"><a href="{{ url_for('show_index_page') }}">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="fullpage">
+    <div class="section">
+        <div class="container-fluid row">
+            <div class="col-lg-6 cl-sm-12" style="height: 30em; overflow: auto;">
+                <table class="table table-striped table-hover table-condensed header-fxied">
+                    <thead>
+                        <tr>
+                            <th>Track Name</th>
+                            <th>Track Swear Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for track in tracks %}
+                        <tr>
+                            <td>
+                                <a href="{{ url_for('show_track_page', artist_slug=artist.artist_slug, album_slug=album.album_slug, track_slug=track.track_slug) }}">{{ track.track_name }}</a>
+                            </td>
+                            <td>{{ track.track_swear_count }}</td>
+                            {% else %}
+                            <li>No entries found</li>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h4 align="center">Swear Word Distribution</h4>
+                    {% pie_chart pie_chart %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

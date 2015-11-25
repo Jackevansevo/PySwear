@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+    <title>Page Not Found</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='page_not_found.css') }}">
+    <h2 align='center'>Page Not found</h2>
+    <img class="errorImage" src="{{ url_for('static', filename="homer-doh.gif") }}" alt="">
+{% endblock %}
+
