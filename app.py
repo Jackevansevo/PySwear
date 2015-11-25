@@ -5,6 +5,7 @@ database and uses Chartkick to make pretty info graphics
 
 import sqlite3
 import chartkick
+from flask_sslify import SSLify
 from flask import (
     Flask,
     Blueprint,
@@ -22,6 +23,7 @@ PASSWORD = 'admin'
 
 # create an initialize app
 APP = Flask(__name__)
+sslify = SSLify(APP)
 APP.config.from_object(__name__)
 
 # Create a chartkick blueprint (see documentation for details)
