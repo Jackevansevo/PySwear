@@ -4,6 +4,10 @@
         <meta charset="utf-8">
         <title>PySwear</title>
 
+        <!-- Chartkick.js -->
+        <script src="http://www.google.com/jsapi"></script>
+        <script src="{{ url_for('static', filename='bower_components/chartkick/chartkick.js') }}"></script>
+
         <!-- JQuery -->
         <script src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js' ) }}"></script>
 
@@ -14,10 +18,6 @@
         <!-- Boostrap  -->
         <script src="{{ url_for('static', filename='bower_components/bootstrap/dist/js/bootstrap.js') }}"></script>
         <link rel="stylesheet/less" type="text/css" href="{{ url_for('static', filename='bower_components/bootstrap/less/bootstrap.less') }}">
-
-        <!-- Chartkick.js -->
-        <script src="http://code.highcharts.com/highcharts.js"></script>
-        <script src="{{ url_for('static', filename='bower_components/chartkick/chartkick.js') }}"></script>
 
         <!-- Fullpage.js -->
         <script src="{{ url_for('static', filename='bower_components/fullpage.js/jquery.fullPage.js') }}"></script>

@@ -5,13 +5,13 @@ database and uses Chartkick to make pretty info graphics
 
 import sqlite3
 import chartkick
-from flask_sslify import SSLify
 from flask import (
     Flask,
     Blueprint,
     g,
     render_template,
 )
+from flask_sslify import SSLify
 
 # configuration
 DATABASE = 'pyswear.db'
